@@ -11,8 +11,8 @@
     <p class="{{ category }}">{{ message }}</p>
     {% endfor %} {% endif %} {% endwith %}
     <form method="POST" enctype="multipart/form-data">
-      {{ form.hidden_tag() }} {{ form.file.label }} {{ form.file }} {{
-      form.submit }}
+      {{ form.hidden_tag() }}{{ form.csrf_token }} {{ form.file.label }} {{
+      form.file }} {{ form.submit }}
     </form>
   </body>
 </html>
