@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    SECRET_KEY = os.getenv('SECRET_KEY', 'domyslny-klucz')
-    WTF_CSRF_SECRET_KEY = os.getenv('WTF_CSRF_SECRET_KEY', 'domyslny-klucz-csrf')
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    WTF_CSRF_SECRET_KEY = os.getenv('WTF_CSRF_SECRET_KEY')
     
     # Use an absolute path for UPLOAD_FOLDER
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
